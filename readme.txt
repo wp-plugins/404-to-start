@@ -43,7 +43,7 @@ Donation link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button
 
 = What is the plugin page?  =
 
-[404-to-start](http://1manfactory.com/4042start/"404-to-start")
+[404-to-start](http://1manfactory.com/4042start)
 
 = Do you have other plugins?  =
 
@@ -51,7 +51,7 @@ Check out my other [Wordpress Plugins](http://wordpress.org/extend/plugins/profi
 
 = Where do I post my feedback? =
 
-Post it at the plugin page: [404-to-start](http://1manfactory.com/4042start/"404-to-start")
+Post it at the plugin page: [404-to-start](http://1manfactory.com/4042start)
 
 == Screenshots ==
 
