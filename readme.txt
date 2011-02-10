@@ -21,7 +21,6 @@ Chose between 301 - Moved permanently (default) and 302 - Moved temporarily.
 1. Upload 404-to-start to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Adjust settings
-done
 
 == Remove plugin ==
 
