@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: f042start\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-02-10 15:03+0100\n"
+"PO-Revision-Date: 2011-02-10 15:03+0100\n"
+"Last-Translator: Juergen Schulze <1manfactory@gmail.com>\n"
+"Language-Team: Juergen Schulze <1manfactory@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: c:\\Program Files\\xampp\\htdocs\\blog\\\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SearchPath-0: wp-content\\plugins\\404-to-start\n"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:68
+#: wp-content\plugins\404-to-start/404-to-start.php:80
+msgid "404 to Start Settings"
+msgstr "404 to Start Einstellungen"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:75
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Sie haben nicht ausreichend Rechte, um auf diese Seite zuzugreifen."
+
+#: wp-content\plugins\404-to-start/404-to-start.php:90
+msgid "404 Redirect to start page"
+msgstr "404 Umleitung auf Startseite"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:95
+msgid "off"
+msgstr "aus"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:96
+msgid "301 - Moved Permanently"
+msgstr "301 - Moved Permanently"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:97
+msgid "302 - Found/ Moved temporarily (not recommended)"
+msgstr "302 - Found/ Moved temporarily (nicht empfohlen)"
+
+#: wp-content\plugins\404-to-start/404-to-start.php:107
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#, fuzzy
+#~ msgid "404 to start Settings"
+#~ msgstr "404 to Start Einstellungen"
+
+#~ msgid "Check your"
+#~ msgstr "Überprüfen Sie ihre"
+
+#~ msgid "neighbours"
+#~ msgstr "Nachbarn"
+
+#~ msgid "or your"
+#~ msgstr "oder ihren"
+
+#~ msgid "status"
+#~ msgstr "Status"
+
+#~ msgid "Geotagmapper Settings"
+#~ msgstr "Geotagmapper Einstellungen"
+
+#~ msgid "Fill in as many information as possible"
+#~ msgstr "Füllen Sie möglichst viele Informationen aus"
+
+#~ msgid "Country"
+#~ msgstr "Land"
+
+#~ msgid "State"
+#~ msgstr "Staat/Bundesland/Region"
+
+#~ msgid "City"
+#~ msgstr "Stadt"
+
+#~ msgid "Street"
+#~ msgstr "Straße"
+
+#~ msgid "Zip Code"
+#~ msgstr "Postleitzahl"
+
+#~ msgid "Get data"
+#~ msgstr "Daten holen"
+
+#~ msgid "from Google maps."
+#~ msgstr "von Google maps"
+
+#~ msgid "Latitude"
+#~ msgstr "Breitengrad"
+
+#~ msgid "Longitude"
+#~ msgstr "Längengrad"
+
+#~ msgid ""
+#~ "ISO 3166-1/2 Codes for the representation of names of countries and their "
+#~ "subdivisions"
+#~ msgstr "ISO 3166-1/2 Codes für Bundesstaaten, Bundesländer und Regionen"
+
+#~ msgid "Pick up"
+#~ msgstr "Holen"
+
+#~ msgid "the value for the second field"
+#~ msgstr "des Wertes für das zweite Feld"
+
+#~ msgid "Insert Geodata into header of"
+#~ msgstr "Einfügen der Geodaten in den Kopf (Header) von"
+
+#~ msgid "Front page"
+#~ msgstr "Startseite (Front page)"
+
+#~ msgid "Single post"
+#~ msgstr "Einzelner Artikel (Single Post)"
+
+#~ msgid "Single page"
+#~ msgstr "Einzelne Seite (Single Page)"
+
+#~ msgid "Category archive"
+#~ msgstr "Kategorienarchiv"
+
+#~ msgid "Tag Archive"
+#~ msgstr "Stichpunkt (Tag) Archiv"
+
+#~ msgid "Search results"
+#~ msgstr "Suchergebnisse"
+
+#~ msgid "Or use the code"
+#~ msgstr "Order benutzen Sie den Code"
+
+#~ msgid "to place the Geodata anywhere in the header"
+#~ msgstr "um Geodaten irgendwo im Kopf (Header) zu platzieren"
