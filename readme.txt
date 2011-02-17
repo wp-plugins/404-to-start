@@ -65,12 +65,12 @@ Just do a normal upgrade.
 
 == Changelog ==
 
-= 1.1 (10.02.2010) =
+= 1.1 (10.02.2011) =
 * new settings menu
 * chose between 301 and 302 redirect
 * tested with Wordpress 3.0.5
 
-= 1.0 (02.01.2010) =
+= 1.0 (02.01.2011) =
 * first version
 
 == Upgrade Notice ==
