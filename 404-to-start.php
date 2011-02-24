@@ -3,7 +3,7 @@
 Plugin Name: 404-to-start
 Plugin URI: http://1manfactory.com/4042start
 Description: Send every 404 page not found error directly to start page to overcome problems with search engines
-Version: 1.1
+Version: 1.2
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
