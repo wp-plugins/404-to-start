@@ -1,6 +1,6 @@
 === 404-to-start ===
 Contributors: 1manfactory
-Donate link: http://1manfactory.com/
+Donate link: http://1manfactory.com/donate 
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
 Requires at least: 3.0
 Tested up to: 3.1
