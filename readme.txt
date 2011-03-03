@@ -2,11 +2,11 @@
 Contributors: 1manfactory
 Donate link: http://1manfactory.com/
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
-Requires at least: 2.8
+Requires at least: 3.0
 Tested up to: 3.1
 Stable tag: "trunk"
 
-Send every 404 page not found error directly to start page to overcome problems with search engines
+Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines
 
 == Description ==
 
@@ -64,6 +64,9 @@ Post it at the plugin page: [404-to-start](http://1manfactory.com/4042start)
 Just do a normal upgrade.
 
 == Changelog ==
+
+= 1.3 (03.03.2011) =
+* Set custom target Url (any page or site you like)
 
 = 1.2 (24.02.2011) =
 * tested with Wordpress 3.1
