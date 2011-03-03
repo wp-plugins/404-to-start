@@ -10,7 +10,7 @@ Send every 404 page not found error directly to start page (or any other page/si
 
 == Description ==
 
-If you don't like the typical 404 page than you can redirect all 404 page not found errors permantly (or temporarily) to the start page.
+If you don't like the typical 404 page than you can redirect all 404 page not found errors permantly (or temporarily) to the start page or any other site/page you like.
 
 This will help you solve problems with external bad links which are not under your influence.
 
