@@ -68,7 +68,7 @@ Just do a normal upgrade.
 = 1.3.2 (27.02.2013) =
 * Replacing deprecated function
 
-= 1.3.1 (03.03.2011) =
+= 1.3.1 (10.01.2013) =
 * Tested on Wordpress 3.5 - OK
 * Slovak translation, thanks to Branco from www.webhostinggeeks.com
 
