@@ -3,13 +3,13 @@
 Plugin Name: 404-to-start
 Plugin URI: http://1manfactory.com/4042start
 Description: Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines
-Version: 1.3.1
+Version: 1.3.2
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
 */
 
-/*  Copyright 2010 Juergen Schulze, 1manfactory.com (email : 1manfactory@gmail.com)
+/*  Copyright 2010-2013 Juergen Schulze, 1manfactory.com (email : 1manfactory@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,11 +38,8 @@ register_uninstall_hook(__FILE__, 'f042start_uninstall');
 function f042start_register_settings() { // whitelist options
 	register_setting( 'f042start_option-group', 'f042start_type' );
 	register_setting( 'f042start_option-group', 'f042start_target', 'f042start_check_values');
-	
 }
 
-function keine_ahnung() {
-}
 
 function f042start_set_lang_file() {
 	# set the language file
@@ -73,7 +70,7 @@ function f042start_uninstall() {
 }
 
 function f042start_plugin_admin_menu() {
-	add_options_page(__('404 to Start Settings', 'f042start'), "404 to Start", 9, basename(__FILE__), 'f042start_plugin_options');
+	add_options_page(__('404 to Start Settings', 'f042start'), "404 to Start", 'manage_options', basename(__FILE__), 'f042start_plugin_options');
 }
 
 
