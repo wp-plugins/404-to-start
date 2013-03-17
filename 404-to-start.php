@@ -2,8 +2,8 @@
 /*
 Plugin Name: 404-to-start
 Plugin URI: http://1manfactory.com/4042start
-Description: Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines
-Version: 1.3.2
+Description: Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
+Version: 1.4
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
@@ -38,6 +38,9 @@ register_uninstall_hook(__FILE__, 'f042start_uninstall');
 function f042start_register_settings() { // whitelist options
 	register_setting( 'f042start_option-group', 'f042start_type' );
 	register_setting( 'f042start_option-group', 'f042start_target', 'f042start_check_values');
+	register_setting( 'f042start_option-group', 'f042emailalert' );
+	register_setting( 'f042start_option-group', 'f042startemailaddres' );
+	
 }
 
 
@@ -54,12 +57,17 @@ function f042start_deactivate() {
 	// needed
 	delete_option('f042start_type');
 	delete_option('f042start_target');
+	delete_option('f042emailalert');
+	delete_option('f042startemailaddres');
+	
 }
 
 function f042start_activate() {
 	# setting default values
 	add_option('f042start_type', '301');
 	add_option('f042start_target', home_url());
+	add_option('f042emailalert', '');
+	add_option('f042startemailaddres', '');
 }
 
 
@@ -67,6 +75,8 @@ function f042start_uninstall() {
 	# delete all data stored
 	delete_option('f042start_type');
 	delete_option('f042start_target');
+	delete_option('f042emailalert');
+	delete_option('f042startemailaddres');
 }
 
 function f042start_plugin_admin_menu() {
@@ -94,7 +104,7 @@ function f042start_plugin_options(){
 	settings_fields( 'f042start_option-group');
 
 	print'
-		<input type="hidden" name="page_options" value="f042start_type, f042start_target" />
+		<input type="hidden" name="page_options" value="f042start_type, f042start_target, f042emailalert, f042startemailaddres" />
 		<table class="form-table">
 		<tr valign="top">
 		<th scope="row">'.__('404 Redirect', 'f042start').'</th>
@@ -104,6 +114,8 @@ function f042start_plugin_options(){
 		<input type="radio" name="f042start_type" value="off" '.f042start_checked("f042start_type", "off").'/> '.__('off', 'f042start').' <br />
 		<input type="radio" name="f042start_type" value="301" '.f042start_checked("f042start_type", "301").'/> '.__('301 - Moved permanently', 'f042start').'<br />
 		<input type="radio" name="f042start_type" value="302" '.f042start_checked("f042start_type", "302").'/> '.__('302 - Found/ Moved temporarily (not recommended)', 'f042start').'<br />
+		<input type="checkbox" name="f042emailalert" value="1" '.f042start_checked("f042emailalert", "1").'/> '.__('Email alert to: ', 'f042start').'<input type="text" name="f042startemailaddres" value="'.get_option("f042startemailaddres").'" size="50">
+		<br />
 		</td>
 		</tr>
 		<tr>
@@ -155,7 +167,13 @@ function f042start_output_header() {
 	} else {
 		$target=get_option("f042start_target");
 	}
-	
+	if (get_option("f042emailalert")) {
+		// send email alert
+		$message=get_bloginfo('name')."\n";
+		$message.=get_bloginfo('wpurl')."\n";
+		$message.=curPageURL()."\n";
+		wp_mail( get_option("f042startemailaddres"), __('404 alert from ', 'f042start').get_bloginfo('name'), $message, "From: ".get_bloginfo('admin_email') );
+	}
 	wp_redirect( $target, get_option("f042start_type") );
 }
 
@@ -204,4 +222,16 @@ function f042start_is_valid_url ( $url )
 		return false;
 }
 
+
+function curPageURL() {
+ $pageURL = 'http';
+ if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+ $pageURL .= "://";
+ if ($_SERVER["SERVER_PORT"] != "80") {
+  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+ } else {
+  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+ }
+ return $pageURL;
+}
 ?>

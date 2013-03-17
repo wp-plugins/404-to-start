@@ -3,10 +3,10 @@ Contributors: 1manfactory
 Donate link: http://1manfactory.com/donate 
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 1.3.2
+Tested up to: 3.5.1
+Stable tag: 1.4
 
-Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines
+Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
 
 == Description ==
 
@@ -65,10 +65,13 @@ Just do a normal upgrade.
 
 == Changelog ==
 
+= 1.4 (17.03.2013) =
+* Email alert
+
 = 1.3.2 (27.02.2013) =
 * Replacing deprecated function
 
-= 1.3.1 (10.01.2013) =
+= 1.3.1 (03.03.2011) =
 * Tested on Wordpress 3.5 - OK
 * Slovak translation, thanks to Branco from www.webhostinggeeks.com
 
