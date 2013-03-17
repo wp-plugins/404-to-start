@@ -2,7 +2,7 @@
 /*
 Plugin Name: 404-to-start
 Plugin URI: http://1manfactory.com/4042start
-Description: Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
+Description: Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
 Version: 1.4
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com

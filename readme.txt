@@ -6,7 +6,7 @@ Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: 1.4
 
-Send every 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
+Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
 
 == Description ==
 
