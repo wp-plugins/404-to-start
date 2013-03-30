@@ -3,7 +3,7 @@
 Plugin Name: 404-to-start
 Plugin URI: http://1manfactory.com/4042start
 Description: Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
-Version: 1.4.3
+Version: 1.5
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
@@ -171,26 +171,33 @@ function f042start_checked($checkOption, $checkValue) {
 // 302=temporary
 function f042start_output_header() {
 
+
 	if ( !is_404() || get_option("f042start_type")=="off" ) return;
-	
+
 	# setting default target to prevent errors
 	if (get_option('f042start_target')=="") {
 		$target=home_url();
 	} else {
 		$target=get_option("f042start_target");
 	}
-	if ( get_option("f042emailalert") && get_option("f042exclude")!="1" && get_option("f042exclude2")!="1" ) {
-		// send email alert
-		$message=get_bloginfo('name')."\n";
-		$message.=get_bloginfo('wpurl')."\n";
-		$message.="False URL: ".f042start_curPageURL()."\n";
-		$message.="Referer URL: ".$_SERVER['HTTP_REFERER']."\n";
-		$message.="User agent: ".$_SERVER['HTTP_USER_AGENT']."\n";
-		$message.="Remote Host: ".$_SERVER['REMOTE_HOST']."\n";
-		$message.="Remote Addres: ".$_SERVER['REMOTE_ADDR']."\n";
-		$returnvalue=wp_mail( get_option("f042startemailaddres"), __('404 alert from ', 'f042start').get_bloginfo('name'), $message, "From: ".get_bloginfo('admin_email') );
-	} else {
-		// no mail
+	
+	
+	if ( get_option("f042emailalert") ) {
+	
+		if  ( (get_option("f042exclude") && is_user_logged_in()) || (get_option("f042exclude2") && f042start_is_crawlers()) ) {
+			// no mail
+		} else {
+			// send email alert
+			$message=get_bloginfo('name')."\n";
+			$message.=get_bloginfo('wpurl')."\n";
+			$message.="False URL: ".f042start_curPageURL()."\n";
+			$message.="Referer URL: ".$_SERVER['HTTP_REFERER']."\n";
+			$message.="User agent: ".$_SERVER['HTTP_USER_AGENT']."\n";
+			$message.="Remote Host: ".$_SERVER['REMOTE_HOST']."\n";
+			$message.="Remote Addres: ".$_SERVER['REMOTE_ADDR']."\n";
+			$returnvalue=wp_mail( get_option("f042startemailaddres"), __('404 alert from ', 'f042start').get_bloginfo('name'), $message, "From: ".get_bloginfo('admin_email') );
+		}	
+	
 	}
 	wp_redirect( $target, get_option("f042start_type") );
 }
