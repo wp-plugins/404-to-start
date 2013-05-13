@@ -1,4 +1,4 @@
-=== 404-to-start ===
+=== 404 to Start ===
 Contributors: 1manfactory
 Donate link: http://1manfactory.com/donate 
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
@@ -18,7 +18,7 @@ Chose between 301 - Moved permanently (default) and 302 - Moved temporarily.
 
 == Installation ==
 
-1. Upload 404-to-start to the `/wp-content/plugins/` directory
+1. Upload `404 to Start` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Adjust settings
 
@@ -45,11 +45,11 @@ No.
 
 = How can I support you? =
 
-Post a comment on [404-to-start](http://1manfactory.com/4042start)
+Post a comment on [404 to Start](http://1manfactory.com/4042start)
 
 = What is the plugin page?  =
 
-[404-to-start](http://1manfactory.com/4042start)
+[404 to Start](http://1manfactory.com/4042start)
 
 = Do you have other plugins?  =
 
@@ -57,7 +57,7 @@ Check out my other [Wordpress Plugins](http://wordpress.org/extend/plugins/profi
 
 = Where do I post my feedback? =
 
-Post it at the plugin page: [404-to-start](http://1manfactory.com/4042start)
+Post it at the plugin page: [404 to Start](http://1manfactory.com/4042start)
 
 == Upgrade Notice ==
 
