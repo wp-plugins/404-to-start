@@ -261,7 +261,7 @@ function f042start_curPageURL() {
 }
 
 function f042start_is_crawlers() {
-	$sites = 'crawler|Java|Google|Yahoo|Ask|bot'; // Add the rest of the search-engines 
+	$sites = 'crawler|Java|Google|Yahoo|Ask|bot|spider'; // Add the rest of the search-engines 
 	return (preg_match("/$sites/i", $_SERVER['HTTP_USER_AGENT']) > 0) ? true : false;  	
 }
 ?>
