@@ -4,7 +4,7 @@ Donate link: http://1manfactory.com/donate
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.5.7
+Stable tag: 1.5.7.1
 
 Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
 
@@ -65,8 +65,11 @@ Just do a normal upgrade.
 
 == Changelog ==
 
+= 1.5.7.1 (11.11.2013) =
+* small bug fix where you could get too many mails
+
 = 1.5.7 (11.11.2013) =
-* Now even sends mail alerts if redirect is turned off
+* No even sends mail alerts if redirect is turned off
 
 = 1.5.6 (11.11.2013) =
 * New search engines

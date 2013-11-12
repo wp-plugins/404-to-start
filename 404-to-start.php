@@ -3,7 +3,7 @@
 Plugin Name: 404 to Start
 Plugin URI: http://1manfactory.com/4042start
 Description: Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
-Version: 1.5.7
+Version: 1.5.7.1
 Author: Jürgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
@@ -178,8 +178,7 @@ function f042start_output_header() {
 		$target=get_option("f042start_target");
 	}
 	
-	
-	if ( get_option("f042emailalert") ) {
+	if ( is_404() && get_option("f042emailalert") ) {
 	
 		if  ( (get_option("f042exclude") && is_user_logged_in()) || (get_option("f042exclude2") && f042start_is_crawlers()) ) {
 			// no mail
