@@ -72,7 +72,7 @@ Just do a normal upgrade.
 * small bug fix where you could get too many mails
 
 = 1.5.7 (11.11.2013) =
-* No even sends mail alerts if redirect is turned off
+* Now even sends mail alerts if redirect is turned off
 
 = 1.5.6 (11.11.2013) =
 * New search engines
