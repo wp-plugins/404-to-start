@@ -259,7 +259,7 @@ function f042start_curPageURL() {
 }
 
 function f042start_is_crawlers() {
-	$sites = 'facebookexternalhit|NING|genieo|butterfly|JS-Kit|InAGist|BUbiNG|crawler|Java|Google|Yahoo|Ask|bot|spider|Twikle|flipboard|longurl|crowsnest|peerindex|UnwindFetchor'; // Add the rest of the search-engines 
+	$sites = 'facebookexternalhit|Squider|NING|genieo|butterfly|JS-Kit|InAGist|BUbiNG|crawler|Java|Google|Yahoo|Ask|bot|spider|Twikle|flipboard|longurl|crowsnest|peerindex|UnwindFetchor'; // Add the rest of the search-engines 
 	return (preg_match("/$sites/i", $_SERVER['HTTP_USER_AGENT']) > 0) ? true : false;  	
 }
 ?>
