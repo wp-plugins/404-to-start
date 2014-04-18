@@ -3,7 +3,7 @@ Contributors: 1manfactory
 Donate link: http://1manfactory.com/donate 
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
 Requires at least: 3.0
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: 1.5.7.3
 
 Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
