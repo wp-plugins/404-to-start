@@ -4,7 +4,7 @@ Donate link: http://1manfactory.com/donate
 Tags: 404, start, start page, page not found, redirect, umleiten, startseite, fehler
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 1.5.7.3
+Stable tag: 1.5.7.4
 
 Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
 
@@ -64,6 +64,10 @@ Post it at the plugin page: [404 to Start](http://1manfactory.com/4042start)
 Just do a normal upgrade.
 
 == Changelog ==
+
+= 1.5.7.4 (07.06.2014) =
+* Ukrainian translation. Thanks to Michael Yunat (http://getvoip.com/blog)
+* repair of Slovak language translation
 
 = 1.5.7.3 (04.12.2013) =
 * New search engines
