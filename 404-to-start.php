@@ -3,7 +3,7 @@
 Plugin Name: 404 to Start
 Plugin URI: http://1manfactory.com/4042start
 Description: Send 404 page not found error directly to start page (or any other page/site) to overcome problems with search engines. With optional email alert.
-Version: 1.5.8.1
+Version: 1.5.9
 Author: Jürgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
@@ -41,6 +41,7 @@ function f042start_register_settings() { // whitelist options
 	register_setting( 'f042start_option-group', 'f042start_emailalert' );
 	register_setting( 'f042start_option-group', 'f042start_exclude' );
 	register_setting( 'f042start_option-group', 'f042start_exclude2' );
+	register_setting( 'f042start_option-group', 'f042start_exclude3' );
 	register_setting( 'f042start_option-group', 'f042start_emailaddres' );
 	
 }
@@ -62,6 +63,7 @@ function f042start_deactivate() {
 	delete_option('f042start_emailalert');
 	delete_option('f042start_exclude');
 	delete_option('f042start_exclude2');
+	delete_option('f042start_exclude3');
 	delete_option('f042start_emailaddres');
 	
 }
@@ -73,6 +75,7 @@ function f042start_activate() {
 	add_option('f042start_emailalert', '');
 	add_option('f042start_exclude', '');
 	add_option('f042start_exclude2', '');
+	add_option('f042start_exclude3', '');
 	add_option('f042start_emailaddres', '');
 }
 
@@ -84,6 +87,7 @@ function f042start_uninstall() {
 	delete_option('f042start_emailalert');
 	delete_option('f042start_exclude');
 	delete_option('f042start_exclude2');
+	delete_option('f042start_exclude3');
 	delete_option('f042start_emailaddres');
 }
 
@@ -112,7 +116,7 @@ function f042start_plugin_options(){
 	settings_fields( 'f042start_option-group');
 
 	print'
-		<input type="hidden" name="page_options" value="f042start_type, f042start_target, f042start_emailalert, f042start_emailaddres, f042start_exclude, f042start_exclude2" />
+		<input type="hidden" name="page_options" value="f042start_type, f042start_target, f042start_emailalert, f042start_emailaddres, f042start_exclude, f042start_exclude2, f042start_exclude3" />
 		<table class="form-table">
 		<tr valign="top">
 		<th scope="row">'.__('404 Redirect', 'f042start').'</th>
@@ -127,6 +131,8 @@ function f042start_plugin_options(){
 		&nbsp;&nbsp;&nbsp;<input type="checkbox" name="f042start_exclude" value="1" '.f042start_checked("f042start_exclude", "1").'/> '.__('Exclude logged in users from triggering email alert', 'f042start').'
 		<br />
 		&nbsp;&nbsp;&nbsp;<input type="checkbox" name="f042start_exclude2" value="1" '.f042start_checked("f042start_exclude2", "1").'/> '.__('Exclude search engine agents from triggering email alert', 'f042start').'		
+		<br />
+		&nbsp;&nbsp;&nbsp;<input type="checkbox" name="f042start_exclude3" value="1" '.f042start_checked("f042start_exclude3", "1").'/> '.__('Exclude hacking attempts from triggering email alert. (Experimental, leave this unchecked if you feel unsure.)', 'f042start').'		
 		<br />
 		</td>
 		</tr>
@@ -184,6 +190,7 @@ function f042start_output_header() {
 				f042start_is_infinitescroll() ||
 				(get_option("f042start_exclude") && is_user_logged_in())
 				|| (get_option("f042start_exclude2") && f042start_is_crawlers())
+				|| (get_option("f042start_exclude3") && f042start_is_hacker(f042start_curPageURL()))
 			) {
 			// no mail
 		} else {
@@ -265,6 +272,11 @@ function f042start_curPageURL() {
 function f042start_is_crawlers() {
 	$sites = 'MnoGoSearch|facebookexternalhit|Squider|NING|genieo|butterfly|JS-Kit|InAGist|BUbiNG|crawler|Java|Google|Yahoo|Ask|bot|spider|Twikle|flipboard|longurl|crowsnest|peerindex|UnwindFetchor'; // Add the rest of the search-engines 
 	return (preg_match("/$sites/i", $_SERVER['HTTP_USER_AGENT']) > 0) ? true : false;  	
+}
+
+function f042start_is_hacker($checkurl) {
+	$hackersurl = 'wp-content\/plugins\/'; // don't check this
+	return (preg_match("/$hackersurl/i", $checkurl) > 0) ? true : false;  	
 }
 
 function f042start_is_infinitescroll() {
